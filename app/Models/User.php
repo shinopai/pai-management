@@ -41,4 +41,32 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    /**
+     * relation
+     */
+    public function store(){
+        return $this->belongsTo(Store::class);
+    }
+
+    public function title(){
+        return $this->belongsTo(Title::class);
+    }
+
+    public function logs(){
+        return $this->hasMany(Log::class);
+    }
+
+    /**
+     * some functions for policy
+     */
+    public function isSuperVisor(): bool
+    {
+        return $this['title_id'] === 1;
+    }
+
+    public static function enumSupserVisor()
+    {
+        return User::where('title_id', '=', 1)->get();
+    }
 }

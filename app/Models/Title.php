@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Title extends Model
 {
     use HasFactory;
+
+    /**
+     * relation
+     */
+    public function users(){
+        return $this->hasMany(User::class);
+    }
 }

@@ -8,4 +8,15 @@ use Illuminate\Database\Eloquent\Model;
 class Customer extends Model
 {
     use HasFactory;
+
+    /**
+     * relation
+     */
+    public function logs(){
+        return $this->hasMany(Log::class);
+    }
+
+    public function store(){
+        return $this->belongsTo(Store::class);
+    }
 }
