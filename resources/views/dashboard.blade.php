@@ -1,17 +1,13 @@
 <x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Dashboard') }}
-        </h2>
-    </x-slot>
-
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 bg-white border-b border-gray-200">
-                    You're logged in!
-                </div>
-            </div>
-        </div>
-    </div>
+  <div class="dashboard">
+    <ul class="dashboard__inner">
+      @canany('viewAny', auth()->user())
+      <li><a href="{{ route('users.index') }}">社員一覧</a></li>
+      @endcanany
+      <li><a href="">役員一覧</a></li>
+      <li><a href="{{ route('titles.index') }}">役職一覧</a></li>
+      <li><a href="">顧客一覧</a></li>
+      <li><a href="">顧客検索</a></li>
+    </ul>
+  </div>
 </x-app-layout>

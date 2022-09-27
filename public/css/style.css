@@ -1,4 +1,7 @@
 @charset "UTF-8";
+/* font size 16px */
+/* font size 18px */
+/* font size 20px */
 /* basic style */
 * {
   font-size: 62.5%;
@@ -36,6 +39,28 @@ figure {
 /* basic class */
 .flex {
   display: flex;
+}
+
+/* header */
+.header {
+  padding: 1% 5%;
+}
+.header__inner {
+  justify-content: space-between;
+}
+.header__item.before a {
+  font-size: clamp(1.8rem, 1.706rem + 0.47vw, 2rem);
+}
+.header__btn {
+  background-color: transparent;
+  border: none;
+  font-size: clamp(1.6rem, 1.506rem + 0.47vw, 1.8rem);
+}
+.header__btn::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f0dd";
+  vertical-align: 3px;
 }
 
 /* home */
@@ -105,4 +130,67 @@ figure {
 .err-msg__item {
   font-size: clamp(1.4rem, 1.36rem + 0.2vw, 1.6rem);
   color: #ea3a35;
+}
+
+/* dashboard */
+.dashboard {
+  background-color: #f9fafc;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dashboard__inner {
+  width: 50%;
+  background-color: #fff;
+  padding: 5%;
+  border: 1px solid #333;
+}
+.dashboard__inner li::before {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 100vh;
+  background-color: #333;
+  margin-right: 10px;
+}
+.dashboard__inner li:not(:last-child) {
+  margin-bottom: 15px;
+}
+.dashboard__inner li a {
+  font-size: clamp(1.4rem, 1.36rem + 0.2vw, 1.6rem);
+  color: #043959;
+  display: contents;
+}
+
+/* 一覧画面 */
+.list {
+  background-color: #f9fafc;
+  padding-top: 30px;
+}
+.list__inner {
+  width: min(80%, 1200px);
+  margin: 0 auto;
+}
+.list__heading {
+  font-size: clamp(1.8rem, 1.706rem + 0.47vw, 2rem);
+  border-bottom: 1px solid #aaa;
+  padding-bottom: 5px;
+}
+.list__table {
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+  border-spacing: inherit;
+}
+.list__table th {
+  font-size: clamp(1.6rem, 1.506rem + 0.47vw, 1.8rem);
+  background-color: #79a5d9;
+  padding: 10px;
+}
+.list__table td {
+  font-size: clamp(1.4rem, 1.36rem + 0.2vw, 1.6rem);
+  padding: 10px;
+  border-bottom: 1px solid #333;
 }

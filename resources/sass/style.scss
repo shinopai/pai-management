@@ -1,3 +1,5 @@
+@import "_mixin";
+
 /* basic style */
 * {
   font-size: 62.5%;
@@ -32,6 +34,32 @@ figure {
   display: flex;
 }
 
+/* header */
+.header {
+  padding: 1% 5%;
+  &__inner {
+    justify-content: space-between;
+  }
+  &__item {
+    &.before {
+      a {
+        @include fs-20();
+      }
+    }
+  }
+  &__btn {
+    background-color: transparent;
+    border: none;
+    @include fs-18();
+    &::after {
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      content: "\f0dd";
+      vertical-align: 3px;
+    }
+  }
+}
+
 /* home */
 .home {
   background-color: #1671d9;
@@ -45,7 +73,7 @@ figure {
   &__link {
     background-color: #ea3a35;
     color: #fff;
-    font-size: clamp(1.4rem, 1.36rem + 0.2vw, 1.6rem);
+    @include fs-16();
     width: 320px;
     text-align: center;
     padding: 10px;
@@ -78,7 +106,7 @@ figure {
   &__btn {
     background-color: #e0768e;
     color: #fff;
-    font-size: clamp(1.4rem, 1.36rem + 0.2vw, 1.6rem);
+    @include fs-16();
     width: 320px;
     padding: 10px;
     margin-top: 10px;
@@ -97,7 +125,72 @@ figure {
     padding-top: 20px;
   }
   &__item {
-    font-size: clamp(1.4rem, 1.36rem + 0.2vw, 1.6rem);
+    @include fs-16();
     color: #ea3a35;
+  }
+}
+
+/* dashboard */
+.dashboard {
+  background-color: #f9fafc;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__inner {
+    width: 50%;
+    background-color: #fff;
+    padding: 5%;
+    border: 1px solid #333;
+    li {
+      &::before {
+        content: "";
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        border-radius: 100vh;
+        background-color: #333;
+        margin-right: 10px;
+      }
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+      a {
+        @include fs-16();
+        color: #043959;
+        display: contents;
+      }
+    }
+  }
+}
+
+/* 一覧画面 */
+.list {
+  background-color: #f9fafc;
+  padding-top: 30px;
+  &__inner {
+    width: min(80%, 1200px);
+    margin: 0 auto;
+  }
+  &__heading {
+    @include fs-20();
+    border-bottom: 1px solid #aaa;
+    padding-bottom: 5px;
+  }
+  &__table {
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    border-spacing: inherit;
+    th {
+      @include fs-18();
+      background-color: #79a5d9;
+      padding: 10px;
+    }
+    td {
+      @include fs-16();
+      padding: 10px;
+      border-bottom: 1px solid #333;
+    }
   }
 }
