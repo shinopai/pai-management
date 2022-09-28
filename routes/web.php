@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\TitleController;
+use App\Http\Controllers\CustomerController;
 
 // ルート
 Route::get('/', function () {
@@ -19,5 +20,8 @@ Route::get('/users', [UserController::class, 'index'])->middleware('auth')->name
 
 // 役職一覧画面
 Route::get('/titles', [TitleController::class, 'index'])->middleware('auth')->name('titles.index');
+
+// 顧客関連ルーティング
+Route::resource('customers', CustomerController::class);
 
 require __DIR__.'/auth.php';

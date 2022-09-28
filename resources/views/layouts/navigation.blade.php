@@ -17,14 +17,18 @@
         </x-slot>
         <x-slot name="content">
           <!-- Authentication -->
-          <form method="POST" action="{{ route('logout') }}" class="">
+          <form
+            method="POST"
+            action="{{ route('logout') }}"
+            class="header__form"
+          >
             @csrf
             <x-dropdown-link
               :href="route('logout')"
               onclick="event.preventDefault();
                                                 this.closest('form').submit();"
             >
-              {{ __("Log Out") }}
+              {{ __("ログアウト") }}
             </x-dropdown-link>
           </form>
         </x-slot>

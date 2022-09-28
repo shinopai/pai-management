@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/* font size 16px */
+/* font size 14px */
 /* font size 18px */
 /* font size 20px */
 /* basic style */
@@ -54,6 +54,7 @@ figure {
 .header__btn {
   background-color: transparent;
   border: none;
+  cursor: pointer;
   font-size: clamp(1.6rem, 1.506rem + 0.47vw, 1.8rem);
 }
 .header__btn::after {
@@ -61,6 +62,12 @@ figure {
   font-weight: 900;
   content: "\f0dd";
   vertical-align: 3px;
+}
+.header__form {
+  text-align: center;
+  font-size: clamp(1rem, 0.96rem + 0.2vw, 1.2rem);
+  background-color: #f9fafc;
+  padding: 5px;
 }
 
 /* home */
@@ -130,6 +137,32 @@ figure {
 .err-msg__item {
   font-size: clamp(1.4rem, 1.36rem + 0.2vw, 1.6rem);
   color: #ea3a35;
+}
+
+/* pagination*/
+.pagination {
+  padding: 15px 0;
+}
+.pagination__display p {
+  font-size: clamp(1.2rem, 1.16rem + 0.2vw, 1.4rem);
+}
+.pagination__display p span {
+  font-size: 1em;
+}
+.pagination__contents {
+  text-align: center;
+}
+.pagination__contents span {
+  font-size: clamp(1.4rem, 1.36rem + 0.2vw, 1.6rem);
+}
+.pagination__link {
+  display: inline-block;
+  font-size: clamp(1.4rem, 1.36rem + 0.2vw, 1.6rem);
+  margin: 5px;
+}
+.pagination__link:not(.next, .prev) {
+  background-color: #79a5d9;
+  padding: 2px 5px;
 }
 
 /* dashboard */

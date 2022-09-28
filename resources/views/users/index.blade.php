@@ -3,6 +3,7 @@
   <div class="list">
     <div class="list__inner">
       <h2 class="list__heading">社員一覧</h2>
+      {{ $users->links('vendor.pagination.showing') }}
       <table class="list__table">
         <thead>
           <tr>
@@ -23,6 +24,7 @@
           @endforeach
         </tbody>
       </table>
+      {{ $users->links() }}
     </div>
   </div>
 </x-app-layout>

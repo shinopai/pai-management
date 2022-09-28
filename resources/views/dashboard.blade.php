@@ -6,7 +6,7 @@
       @endcanany
       <li><a href="">役員一覧</a></li>
       <li><a href="{{ route('titles.index') }}">役職一覧</a></li>
-      <li><a href="">顧客一覧</a></li>
+      <li><a href="{{ route('customers.index') }}">顧客一覧</a></li>
       <li><a href="">顧客検索</a></li>
     </ul>
   </div>

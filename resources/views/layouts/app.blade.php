@@ -21,6 +21,13 @@
 
     <!-- style -->
     <link rel="stylesheet" href="{{ asset('css/style.css') }}" />
+
+    <!-- jquery -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.js"
+      integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body class="font-sans antialiased" style="margin: 0;">
     <div class="min-h-screen bg-gray-100">
@@ -31,5 +38,8 @@
         {{ $slot }}
       </main>
     </div>
+
+    <!-- script -->
+    <script src="{{ asset('js/app.js') }}"></script>
   </body>
 </html>
