@@ -10,6 +10,16 @@ class Log extends Model
     use HasFactory;
 
     /**
+     * The attributes that are mass assignable.
+     *
+     * @var array<int, string>
+     */
+    protected $fillable = [
+        'log',
+        'customer_id'
+    ];
+
+    /**
      * relation
      */
     public function customer(){

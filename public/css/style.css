@@ -18,6 +18,7 @@ a {
   text-decoration: none;
   color: #333;
   display: block;
+  font-size: 1em;
 }
 
 ul {
@@ -39,6 +40,25 @@ figure {
 /* basic class */
 .flex {
   display: flex;
+}
+
+/* flash message */
+.flash-msg {
+  background-color: #98fb98;
+  color: #fff;
+  font-weight: bold;
+  font-size: clamp(1.2rem, 1.16rem + 0.2vw, 1.4rem);
+  text-align: center;
+  padding: 10px;
+}
+
+/* error message */
+.err-msg {
+  color: #ea3a35;
+}
+.err-msg li {
+  font-weight: bold;
+  font-size: clamp(1.2rem, 1.16rem + 0.2vw, 1.4rem);
 }
 
 /* header */
@@ -226,4 +246,88 @@ figure {
   font-size: clamp(1.4rem, 1.36rem + 0.2vw, 1.6rem);
   padding: 10px;
   border-bottom: 1px solid #333;
+}
+.list__table td a {
+  color: #79a5d9;
+}
+
+/* 顧客詳細ページ */
+.detail {
+  background-color: #f9fafc;
+  padding-top: 30px;
+}
+.detail__inner {
+  width: min(70%, 1200px);
+  margin: 0 auto;
+}
+.detail__link {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-left: auto;
+  font-size: clamp(1.2rem, 1.16rem + 0.2vw, 1.4rem);
+}
+.detail__heading {
+  font-size: clamp(1.8rem, 1.706rem + 0.47vw, 2rem);
+}
+.detail__list {
+  background-color: #fff;
+  font-size: clamp(1.4rem, 1.36rem + 0.2vw, 1.6rem);
+  padding: 20px;
+}
+.detail__list dt,
+.detail__list dd {
+  font-size: 1em;
+}
+.detail__list dd {
+  margin-bottom: 10px;
+}
+.detail__form {
+  margin-top: 30px;
+  padding: 10px 0;
+  background-color: #fff;
+}
+.detail__form-label {
+  font-size: clamp(1.2rem, 1.16rem + 0.2vw, 1.4rem);
+  vertical-align: top;
+}
+.detail__form-textarea {
+  resize: none;
+  padding: 10px;
+  font-size: clamp(1.4rem, 1.36rem + 0.2vw, 1.6rem);
+}
+.detail__form-submit {
+  vertical-align: bottom;
+  margin-bottom: 4px;
+  border: 1.5px solid #79a5d9;
+  color: #79a5d9;
+  background-color: transparent;
+  font-size: clamp(1.2rem, 1.16rem + 0.2vw, 1.4rem);
+  border-radius: 4px;
+  padding: 3px 10px;
+  cursor: pointer;
+}
+.detail__log-list {
+  margin-top: 30px;
+  background-color: #fff;
+  padding: 30px;
+}
+.detail__log-item {
+  font-size: clamp(1.4rem, 1.36rem + 0.2vw, 1.6rem);
+}
+.detail__log-item p {
+  font-size: 1em;
+  margin-bottom: 0;
+}
+.detail__log-item span {
+  font-size: clamp(1rem, 0.96rem + 0.2vw, 1.2rem);
+}
+.detail__log-item.existing {
+  position: relative;
+  padding-left: 20px;
+}
+.detail__log-item.existing::before {
+  content: "●";
+  position: absolute;
+  left: 0;
+  top: 0;
 }

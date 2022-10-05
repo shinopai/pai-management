@@ -4,8 +4,8 @@ $(function(){
   logoutForm.hide();
 
   $('.header__btn').hover(function(){
-    logoutForm.fadeIn();
+    logoutForm.slideDown();
   }, function(){
-    logoutForm.fadeOut();
+    logoutForm.slideUp();
   })
 })

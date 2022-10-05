@@ -16,7 +16,12 @@
         <tbody>
           @foreach($customers as $customer)
           <tr>
-            <td>{{ $customer->name }}</td>
+            <td>
+              <a
+                href="{{ route('customers.show', ['customer' => $customer->id]) }}"
+                >{{ $customer->name }}</a
+              >
+            </td>
             <td>{{ $customer->store->name }}</td>
             <td>{{ $customer->post_code }}</td>
             <td>{{ $customer->address }}</td>
