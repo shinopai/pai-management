@@ -42,6 +42,7 @@ figure {
   display: flex;
 }
 
+/* basic color */
 /* flash message */
 .flash-msg {
   background-color: #98fb98;
@@ -88,6 +89,7 @@ figure {
   font-size: clamp(1rem, 0.96rem + 0.2vw, 1.2rem);
   background-color: #f9fafc;
   padding: 5px;
+  margin-top: -3px;
 }
 
 /* home */
@@ -330,4 +332,42 @@ figure {
   position: absolute;
   left: 0;
   top: 0;
+}
+
+/* 新規顧客登録ページ */
+.customer__form {
+  background-color: #fff;
+  width: min(70%, 900px);
+  padding: 30px;
+}
+.customer__form-wrap {
+  background-color: #f9fafc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.customer__form-heading {
+  font-size: clamp(1.8rem, 1.706rem + 0.47vw, 2rem);
+}
+.customer__form-inner {
+  width: 50%;
+  margin: 0 auto;
+}
+.customer__form-item {
+  margin-bottom: 15px;
+}
+.customer__form-item label {
+  font-size: clamp(1.2rem, 1.16rem + 0.2vw, 1.4rem);
+}
+.customer__form-item input {
+  padding: 5px 10px;
+  width: 100%;
+  font-size: clamp(1.4rem, 1.36rem + 0.2vw, 1.6rem);
+}
+.customer__form-item input + span {
+  display: block;
+  margin-top: 3px;
+}
+.customer__form-btn {
+  width: 100%;
 }

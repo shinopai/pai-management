@@ -35,6 +35,10 @@ figure {
   display: flex;
 }
 
+/* basic color */
+$basic-blue: #f9fafc;
+$basic-dark-blue: #79a5d9;
+
 /* flash message */
 .flash-msg {
   background-color: #98fb98;
@@ -82,8 +86,9 @@ figure {
   &__form {
     text-align: center;
     font-size: clamp(1rem, 0.96rem + 0.2vw, 1.2rem);
-    background-color: #f9fafc;
+    background-color: $basic-blue;
     padding: 5px;
+    margin-top: -3px;
   }
 }
 
@@ -179,7 +184,7 @@ figure {
     @include fs-16();
     margin: 5px;
     &:not(.next, .prev) {
-      background-color: #79a5d9;
+      background-color: $basic-dark-blue;
       padding: 2px 5px;
     }
   }
@@ -187,7 +192,7 @@ figure {
 
 /* dashboard */
 .dashboard {
-  background-color: #f9fafc;
+  background-color: $basic-blue;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -221,7 +226,7 @@ figure {
 
 /* 一覧画面 */
 .list {
-  background-color: #f9fafc;
+  background-color: $basic-blue;
   padding-top: 30px;
   &__inner {
     width: min(80%, 1200px);
@@ -239,7 +244,7 @@ figure {
     border-spacing: inherit;
     th {
       @include fs-18();
-      background-color: #79a5d9;
+      background-color: $basic-dark-blue;
       padding: 10px;
     }
     td {
@@ -247,7 +252,7 @@ figure {
       padding: 10px;
       border-bottom: 1px solid #333;
       a {
-        color: #79a5d9;
+        color: $basic-dark-blue;
       }
     }
   }
@@ -255,7 +260,7 @@ figure {
 
 /* 顧客詳細ページ */
 .detail {
-  background-color: #f9fafc;
+  background-color: $basic-blue;
   padding-top: 30px;
   &__inner {
     width: min(70%, 1200px);
@@ -297,8 +302,8 @@ figure {
     &-submit {
       vertical-align: bottom;
       margin-bottom: 4px;
-      border: 1.5px solid #79a5d9;
-      color: #79a5d9;
+      border: 1.5px solid $basic-dark-blue;
+      color: $basic-dark-blue;
       background-color: transparent;
       @include fs-14();
       border-radius: 4px;
@@ -332,5 +337,43 @@ figure {
         }
       }
     }
+  }
+}
+
+/* 新規顧客登録ページ */
+.customer__form {
+  background-color: #fff;
+  width: min(70%, 900px);
+  padding: 30px;
+  &-wrap {
+    background-color: $basic-blue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &-heading {
+    @include fs-20();
+  }
+  &-inner {
+    width: 50%;
+    margin: 0 auto;
+  }
+  &-item {
+    margin-bottom: 15px;
+    label {
+      @include fs-14();
+    }
+    input {
+      padding: 5px 10px;
+      width: 100%;
+      @include fs-16();
+      & + span {
+        display: block;
+        margin-top: 3px;
+      }
+    }
+  }
+  &-btn {
+    width: 100%;
   }
 }

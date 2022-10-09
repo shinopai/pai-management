@@ -149,7 +149,12 @@ return [
     'attributes' => [
         'name' => '名前',
         'email' => 'メールアドレス',
-        'password' => 'パスワード'
+        'password' => 'パスワード',
+        'post_code' => '郵便番号',
+        'address' => '住所',
+        'birthday' => '生年月日',
+        'phone' => '電話番号',
+        'store_id' => '店舗番号'
     ],
 
 ];

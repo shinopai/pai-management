@@ -8,6 +8,7 @@
       <li><a href="{{ route('titles.index') }}">役職一覧</a></li>
       <li><a href="{{ route('customers.index') }}">顧客一覧</a></li>
       <li><a href="">顧客検索</a></li>
+      <li><a href="{{ route('customers.create') }}">新規顧客登録</a></li>
     </ul>
   </div>
 </x-app-layout>
